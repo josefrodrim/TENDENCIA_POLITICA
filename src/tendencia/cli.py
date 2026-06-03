@@ -34,6 +34,19 @@ def cmd_exportar(args: argparse.Namespace) -> None:
     print(f"CSV exportado → {destino}")
 
 
+def cmd_recuperar(args: argparse.Namespace) -> None:
+    """Recupera histórico via Wayback Machine para fechas no cubiertas por RSS."""
+    from tendencia.wayback import recuperar_fecha, recuperar_rango
+    if args.fecha:
+        print(f"Recuperando {args.fecha} vía Wayback…")
+        recuperar_fecha(args.fecha)
+    else:
+        desde = args.desde
+        hasta = args.hasta
+        print(f"Recuperando rango {desde} → {hasta} vía Wayback…")
+        recuperar_rango(desde, hasta)
+
+
 def cmd_importar(args: argparse.Namespace) -> None:
     """Lee el CSV codificado manualmente y actualiza valencia_humana en la BD."""
     import csv
@@ -79,6 +92,12 @@ def main() -> None:
 
     p_exp = sub.add_parser('exportar', help='Exportar BD a CSV')
     p_exp.set_defaults(func=cmd_exportar)
+
+    p_rec = sub.add_parser('recuperar', help='Recuperar histórico via Wayback Machine')
+    p_rec.add_argument('--fecha',  metavar='YYYY-MM-DD', help='Fecha específica')
+    p_rec.add_argument('--desde',  metavar='YYYY-MM-DD', help='Inicio del rango')
+    p_rec.add_argument('--hasta',  metavar='YYYY-MM-DD', help='Fin del rango')
+    p_rec.set_defaults(func=cmd_recuperar)
 
     p_imp = sub.add_parser('importar', help='Importar valencia_humana desde CSV codificado')
     p_imp.add_argument('csv', metavar='archivo.csv', help='CSV con columnas valencia_humana y foto_tono ya completadas')
