@@ -26,10 +26,10 @@ SCRAPERS: dict[str, str] = {
     'Gestión':      'tendencia.scrapers.gestion',
     'Correo':       'tendencia.scrapers.correo',
     'Ojo':          'tendencia.scrapers.ojo',
-    # ── Fase 4 (HTML scraping) ──────────────────────────────────────
-    # 'Diario Uno':   'tendencia.scrapers.diariouno',
-    # 'Expreso':      'tendencia.scrapers.expreso',
-    # 'La Razón':     'tendencia.scrapers.larazon',
+    # ── HTML scraping ────────────────────────────────────────────────
+    'Diario Uno': 'tendencia.scrapers.diariouno',
+    'Expreso':    'tendencia.scrapers.expreso',
+    'La Razón':   'tendencia.scrapers.larazon',
 }
 
 

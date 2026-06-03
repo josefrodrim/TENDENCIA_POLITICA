@@ -34,6 +34,19 @@ def cmd_exportar(args: argparse.Namespace) -> None:
     print(f"CSV exportado → {destino}")
 
 
+def cmd_valencia(args: argparse.Namespace) -> None:
+    from tendencia.llm import procesar_pendientes
+    limite = args.limite
+    n = procesar_pendientes(limite=limite)
+    print(f"\nTotal procesadas: {n}")
+
+
+def cmd_reporte(args: argparse.Namespace) -> None:
+    from tendencia.reports.html import generar
+    ruta = generar()
+    print(f"Reporte generado → {ruta}")
+
+
 def cmd_kappa(args: argparse.Namespace) -> None:
     from tendencia.kappa import calcular_kappa
     r = calcular_kappa()
@@ -54,6 +67,13 @@ def main() -> None:
 
     p_exp = sub.add_parser('exportar', help='Exportar BD a CSV')
     p_exp.set_defaults(func=cmd_exportar)
+
+    p_val = sub.add_parser('valencia', help='Proponer valencia con LLM (filas pendientes)')
+    p_val.add_argument('--limite', type=int, default=None, metavar='N', help='Máximo de filas a procesar')
+    p_val.set_defaults(func=cmd_valencia)
+
+    p_rep = sub.add_parser('reporte', help='Generar reporte HTML')
+    p_rep.set_defaults(func=cmd_reporte)
 
     p_kap = sub.add_parser('kappa', help='Calcular Cohen\'s kappa LLM vs humano')
     p_kap.set_defaults(func=cmd_kappa)
