@@ -11,6 +11,15 @@ Este análisis es **descriptivo y neutral**: mide a ambos candidatos con la mism
 Una asimetría observada en la cobertura no equivale por sí sola a intención editorial;
 es un dato empírico que el lector debe interpretar en su contexto.
 
+## Cobertura real del dataset
+
+| Período | Diarios cubiertos | Estado |
+|---|---|---|
+| 15–27 mayo 2026 | 1–2 (RSS fuera de ventana) | Excluido — cobertura insuficiente |
+| **28 mayo – 6 junio 2026** | **4–7 diarios** | **Período de análisis** |
+
+La ventana de análisis parte del 28 de mayo porque los feeds RSS solo conservan artículos recientes (~5-7 días). Las fechas anteriores no tienen cobertura multi-diario suficiente para comparación válida. Esta limitación está documentada en la metodología.
+
 ## Configuración inicial
 
 ```bash

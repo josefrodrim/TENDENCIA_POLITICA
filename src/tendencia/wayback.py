@@ -42,14 +42,14 @@ FUENTES: list[tuple[str, str, str]] = [
     ('La Razón',     'https://larazon.pe/',                                         'larazon'),
 ]
 
-_CDX   = 'http://web.archive.org/cdx/search/cdx'
+_CDX   = 'https://web.archive.org/cdx/search/cdx'   # HTTPS evita redirect/timeout
 _WB    = 'https://web.archive.org/web'
 _UA    = 'TendenciaPoliticaBot/0.1 (investigacion academica; josef.rodrim@gmail.com)'
 _SESS  = requests.Session()
 _SESS.headers.update({'User-Agent': _UA})
 
-# Máxima distancia aceptable entre el snapshot y la hora objetivo (segundos)
-_MAX_DELTA_S = 18 * 3600  # 18 horas
+_CDX_TIMEOUT = 30   # segundos — Wayback CDX puede ser lento
+_MAX_DELTA_S = 18 * 3600
 
 
 def _timestamp_objetivo(fecha: str) -> str:
@@ -73,7 +73,7 @@ def buscar_snapshot(url: str, fecha: str) -> str | None:
             'closest': ts,
             'fl':      'timestamp,statuscode',
             'filter':  'statuscode:200',
-        }, timeout=15)
+        }, timeout=_CDX_TIMEOUT)
         resp.raise_for_status()
         data = resp.json()
     except Exception as e:

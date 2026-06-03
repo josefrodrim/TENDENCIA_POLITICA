@@ -87,6 +87,14 @@ def parse_expreso(html: str, fecha: str) -> list[Titular]:
 
 
 def fetch(fecha: str) -> list[Titular]:
+    from datetime import date
+    if fecha != date.today().isoformat():
+        # El HTML de portada no tiene fecha en URL ni en <time> — no sirve para histórico.
+        # Para fechas pasadas usar: python -m tendencia.cli recuperar --fecha <fecha>
+        raise ScraperError(
+            f"[{_DIARIO}] Solo captura el día actual. "
+            f"Para histórico usar: tendencia.cli recuperar --fecha {fecha}"
+        )
     try:
         html = get_html(_URL)
     except Exception as e:
