@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Datos y base de datos
+data/*.db
+data/*.csv
+data/*.sqlite
+
+# Entorno
+.env
+.env.*
+
+# Playwright
+playwright/.auth/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code
+CLAUDE.md
+
+# macOS
+.DS_Store
+
+# Tests
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Reportes generados
+reports/output/

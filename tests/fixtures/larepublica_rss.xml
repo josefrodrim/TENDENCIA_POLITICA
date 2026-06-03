@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     version="2.0" xml:base="https://larepublica.pe">
+<channel>
+  <title>La República: Últimas noticias</title>
+  <link>https://larepublica.pe</link>
+  <description>Noticias del Perú y del mundo</description>
+  <language>es</language>
+
+  <!-- Item 1: política, menciona a Keiko, tiene foto (media:content) -->
+  <item>
+    <title><![CDATA[ Keiko Fujimori presenta plan de gobierno ante el JNE ]]></title>
+    <link>https://larepublica.pe/politica/2026/06/02/keiko-fujimori-presenta-plan-ante-jne-hnews-100001</link>
+    <guid isPermaLink="true">https://larepublica.pe/politica/2026/06/02/keiko-fujimori-presenta-plan-ante-jne-hnews-100001</guid>
+    <description><![CDATA[ La candidata de Fuerza Popular expuso sus propuestas económicas y de seguridad ciudadana. ]]></description>
+    <category domain="https://larepublica.pe/politica">Política</category>
+    <dc:creator>Redacción Política</dc:creator>
+    <pubDate>Tue, 02 Jun 2026 12:00:00 GMT</pubDate>
+    <media:content height="735" width="1250" type="image/jpeg"
+      url="https://larepublica.cronosmedia.glr.pe/original/2026/06/02/img001.jpg"/>
+  </item>
+
+  <!-- Item 2: política, menciona a Roberto Sánchez, sin foto -->
+  <item>
+    <title><![CDATA[ Roberto Sánchez promete reducir pobreza en su primer año de gobierno ]]></title>
+    <link>https://larepublica.pe/politica/2026/06/02/roberto-sanchez-promete-reducir-pobreza-hnews-100002</link>
+    <guid isPermaLink="true">https://larepublica.pe/politica/2026/06/02/roberto-sanchez-promete-reducir-pobreza-hnews-100002</guid>
+    <description><![CDATA[ Juntos por el Perú presentó su propuesta social con énfasis en educación y salud pública. ]]></description>
+    <category domain="https://larepublica.pe/politica">Política</category>
+    <dc:creator>Narda Saavedra</dc:creator>
+    <pubDate>Tue, 02 Jun 2026 11:00:00 GMT</pubDate>
+  </item>
+
+  <!-- Item 3: columnistas (opinión), sin foto -->
+  <item>
+    <title><![CDATA[ El peso de la memoria ]]></title>
+    <link>https://larepublica.pe/columnistas/2026/06/02/el-peso-de-la-memoria-hnews-100003</link>
+    <guid isPermaLink="true">https://larepublica.pe/columnistas/2026/06/02/el-peso-de-la-memoria-hnews-100003</guid>
+    <description><![CDATA[ Reflexiones sobre el voto en segunda vuelta y sus implicancias históricas para el Perú. ]]></description>
+    <category domain="https://larepublica.pe/columnistas">Columnistas</category>
+    <dc:creator>César Hildebrandt</dc:creator>
+    <pubDate>Tue, 02 Jun 2026 08:00:00 GMT</pubDate>
+  </item>
+
+  <!-- Item 4: ambos candidatos en el mismo titular, tiene foto (image:image) -->
+  <item>
+    <title><![CDATA[ Keiko Fujimori y Roberto Sánchez debaten esta tarde ante el JNE ]]></title>
+    <link>https://larepublica.pe/politica/2026/06/02/keiko-fujimori-y-roberto-sanchez-debaten-jne-hnews-100005</link>
+    <guid isPermaLink="true">https://larepublica.pe/politica/2026/06/02/keiko-fujimori-y-roberto-sanchez-debaten-jne-hnews-100005</guid>
+    <description><![CDATA[ Ambos candidatos presidenciales se enfrentarán en debate televisado esta tarde. ]]></description>
+    <category domain="https://larepublica.pe/politica">Política</category>
+    <pubDate>Tue, 02 Jun 2026 10:00:00 GMT</pubDate>
+    <image:image>
+      <image:loc>https://larepublica.cronosmedia.glr.pe/original/2026/06/02/img002.jpg</image:loc>
+      <image:title><![CDATA[ Debate presidencial ]]></image:title>
+    </image:image>
+  </item>
+
+  <!-- Item 5: economía, sin candidatos, sin foto -->
+  <item>
+    <title><![CDATA[ Precio del dólar sube esta mañana en el mercado local ]]></title>
+    <link>https://larepublica.pe/economia/2026/06/02/precio-del-dolar-sube-esta-manana-hnews-100006</link>
+    <guid isPermaLink="true">https://larepublica.pe/economia/2026/06/02/precio-del-dolar-sube-esta-manana-hnews-100006</guid>
+    <description><![CDATA[ El tipo de cambio registró una ligera alza en las primeras horas de la jornada. ]]></description>
+    <category domain="https://larepublica.pe/economia">Economía</category>
+    <pubDate>Tue, 02 Jun 2026 07:30:00 GMT</pubDate>
+  </item>
+
+  <!-- Item 6: día anterior — NO debe incluirse al filtrar por 2026-06-02 -->
+  <item>
+    <title><![CDATA[ Esta nota es del día anterior y no debe aparecer ]]></title>
+    <link>https://larepublica.pe/politica/2026/06/01/nota-del-dia-anterior-hnews-100004</link>
+    <guid isPermaLink="true">https://larepublica.pe/politica/2026/06/01/nota-del-dia-anterior-hnews-100004</guid>
+    <description><![CDATA[ Contenido del día anterior, fuera del rango de fecha objetivo. ]]></description>
+    <pubDate>Mon, 01 Jun 2026 20:00:00 GMT</pubDate>
+  </item>
+
+</channel>
+</rss>

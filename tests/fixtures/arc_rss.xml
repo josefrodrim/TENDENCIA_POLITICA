@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     version="2.0">
+<channel>
+  <title>El Comercio: Últimas noticias</title>
+  <link>https://elcomercio.pe</link>
+  <description>Noticias del Perú y el mundo</description>
+
+  <!-- Item 1: política, Keiko, pubDate UTC mismo día 2026-06-02 -->
+  <item>
+    <title><![CDATA[ Keiko Fujimori cierra campaña con mitin en Lima ]]></title>
+    <link>https://elcomercio.pe/politica/keiko-fujimori-cierra-campana-con-mitin-en-lima-noticia/</link>
+    <guid isPermaLink="true">https://elcomercio.pe/politica/keiko-fujimori-cierra-campana-con-mitin-en-lima-noticia/</guid>
+    <dc:creator><![CDATA[ Redacción Política ]]></dc:creator>
+    <description><![CDATA[ La candidata de Fuerza Popular convocó a sus seguidores en el Estadio Nacional. ]]></description>
+    <pubDate>Tue, 02 Jun 2026 14:00:00 +0000</pubDate>
+    <media:content height="735" width="1250" type="image/jpeg"
+      url="https://elcomercio.pe/img/keiko_mitin.jpg"/>
+  </item>
+
+  <!-- Item 2: Roberto Sánchez, pubDate a las 23:00 UTC del 02 = 18:00 Perú → fecha Perú 2026-06-02 ✓ -->
+  <item>
+    <title><![CDATA[ Roberto Sánchez promete nueva constitución en los primeros 100 días ]]></title>
+    <link>https://elcomercio.pe/politica/roberto-sanchez-promete-nueva-constitucion-noticia/</link>
+    <guid isPermaLink="true">https://elcomercio.pe/politica/roberto-sanchez-promete-nueva-constitucion-noticia/</guid>
+    <dc:creator><![CDATA[ Redacción Política ]]></dc:creator>
+    <description><![CDATA[ El candidato de Juntos por el Perú detalló sus primeras medidas de gobierno. ]]></description>
+    <pubDate>Tue, 02 Jun 2026 23:00:00 +0000</pubDate>
+    <media:content height="500" width="900" type="image/jpeg"
+      url="https://elcomercio.pe/img/sanchez_promesa.jpg"/>
+  </item>
+
+  <!-- Item 3: CASO BORDE — pubDate 03 Jun 01:00 UTC = 02 Jun 20:00 Perú → fecha Perú 2026-06-02 ✓ -->
+  <item>
+    <title><![CDATA[ Encuesta de última hora: empate técnico entre candidatos ]]></title>
+    <link>https://elcomercio.pe/politica/encuesta-empate-tecnico-segunda-vuelta-noticia/</link>
+    <guid isPermaLink="true">https://elcomercio.pe/politica/encuesta-empate-tecnico-segunda-vuelta-noticia/</guid>
+    <dc:creator><![CDATA[ Redacción Digital ]]></dc:creator>
+    <description><![CDATA[ Según la encuesta, ambos candidatos se encuentran dentro del margen de error. ]]></description>
+    <pubDate>Wed, 03 Jun 2026 01:00:00 +0000</pubDate>
+  </item>
+
+  <!-- Item 4: opinión, sin foto -->
+  <item>
+    <title><![CDATA[ El dilema del voto ]]></title>
+    <link>https://elcomercio.pe/opinion/el-dilema-del-voto-noticia/</link>
+    <guid isPermaLink="true">https://elcomercio.pe/opinion/el-dilema-del-voto-noticia/</guid>
+    <dc:creator><![CDATA[ Columnista Invitado ]]></dc:creator>
+    <description><![CDATA[ Reflexiones sobre la decisión que enfrentan los peruanos este 7 de junio. ]]></description>
+    <pubDate>Tue, 02 Jun 2026 10:00:00 +0000</pubDate>
+  </item>
+
+  <!-- Item 5: CASO BORDE — pubDate 03 Jun 05:01 UTC = 03 Jun 00:01 Perú → fecha 2026-06-03 → NO incluir -->
+  <item>
+    <title><![CDATA[ Esta nota es del 3 de junio en hora Perú y NO debe aparecer ]]></title>
+    <link>https://elcomercio.pe/politica/nota-del-3-de-junio-peru-noticia/</link>
+    <guid isPermaLink="true">https://elcomercio.pe/politica/nota-del-3-de-junio-peru-noticia/</guid>
+    <dc:creator><![CDATA[ Redacción ]]></dc:creator>
+    <description><![CDATA[ Nota publicada después de medianoche en Perú. ]]></description>
+    <pubDate>Wed, 03 Jun 2026 05:01:00 +0000</pubDate>
+  </item>
+
+  <!-- Item 6: economía, sin candidatos, sin foto -->
+  <item>
+    <title><![CDATA[ Bolsa de Lima abre al alza impulsada por mineras ]]></title>
+    <link>https://elcomercio.pe/economia/bolsa-de-lima-abre-al-alza-noticia/</link>
+    <guid isPermaLink="true">https://elcomercio.pe/economia/bolsa-de-lima-abre-al-alza-noticia/</guid>
+    <dc:creator><![CDATA[ Redacción Economía ]]></dc:creator>
+    <description><![CDATA[ El índice general de la BVL subió 0.8% en la apertura de la jornada. ]]></description>
+    <pubDate>Tue, 02 Jun 2026 16:00:00 +0000</pubDate>
+  </item>
+
+</channel>
+</rss>
