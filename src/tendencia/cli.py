@@ -34,6 +34,18 @@ def cmd_exportar(args: argparse.Namespace) -> None:
     print(f"CSV exportado → {destino}")
 
 
+def cmd_importar(args: argparse.Namespace) -> None:
+    """Lee el CSV codificado manualmente y actualiza valencia_humana en la BD."""
+    import csv
+    from tendencia.config import DB_PATH
+    from tendencia.db import actualizar_humano
+    ruta = args.csv
+    with open(ruta, newline='', encoding='utf-8') as f:
+        filas = list(csv.DictReader(f))
+    n = actualizar_humano(filas, db_path=DB_PATH)
+    print(f"{n} filas actualizadas en la BD desde {ruta}")
+
+
 def cmd_valencia(args: argparse.Namespace) -> None:
     from tendencia.llm import procesar_pendientes
     limite = args.limite
@@ -68,7 +80,11 @@ def main() -> None:
     p_exp = sub.add_parser('exportar', help='Exportar BD a CSV')
     p_exp.set_defaults(func=cmd_exportar)
 
-    p_val = sub.add_parser('valencia', help='Proponer valencia con LLM (filas pendientes)')
+    p_imp = sub.add_parser('importar', help='Importar valencia_humana desde CSV codificado')
+    p_imp.add_argument('csv', metavar='archivo.csv', help='CSV con columnas valencia_humana y foto_tono ya completadas')
+    p_imp.set_defaults(func=cmd_importar)
+
+    p_val = sub.add_parser('valencia', help='Proponer valencia con LLM (filas pendientes, opcional)')
     p_val.add_argument('--limite', type=int, default=None, metavar='N', help='Máximo de filas a procesar')
     p_val.set_defaults(func=cmd_valencia)
 

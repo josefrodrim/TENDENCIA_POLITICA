@@ -77,6 +77,44 @@ def insertar_filas(filas: Iterable[Titular], db_path: Path = DB_PATH) -> int:
     return despues - antes
 
 
+def actualizar_humano(filas: list[dict], db_path: Path = DB_PATH) -> int:
+    """
+    Actualiza valencia_humana y foto_tono desde un CSV codificado manualmente.
+    Hace match por (diario, fecha, titular, candidato).
+    Solo actualiza filas donde valencia_humana no sea vacía.
+    Devuelve número de filas actualizadas.
+    """
+    sql = """
+        UPDATE titulares
+           SET valencia_humana = ?,
+               foto_tono       = ?
+         WHERE diario   = ?
+           AND fecha    = ?
+           AND titular  = ?
+           AND candidato = ?
+    """
+    actualizadas = 0
+    with get_conn(db_path) as conn:
+        for f in filas:
+            vh = f.get('valencia_humana', '')
+            if vh == '' or vh is None:
+                continue
+            try:
+                vh_int = int(vh)
+            except (ValueError, TypeError):
+                continue
+            conn.execute(sql, (
+                vh_int,
+                f.get('foto_tono', '') or '',
+                f.get('diario', ''),
+                f.get('fecha', ''),
+                f.get('titular', ''),
+                f.get('candidato', ''),
+            ))
+            actualizadas += 1
+    return actualizadas
+
+
 def exportar_csv(destino: Path, db_path: Path = DB_PATH) -> None:
     with get_conn(db_path) as conn:
         rows = conn.execute(
